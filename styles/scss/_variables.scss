@@ -1,0 +1,38 @@
+// ============================================
+// _variables.scss — общие переменные проекта
+// Используются и в Bootstrap (через with)
+// и в своих партиалах (через @use)
+// ============================================
+
+// --- Bootstrap переменные ---
+$primary:             #f5c842;
+$secondary:           #9b9fd4;
+$border-radius:       0.75rem;
+$font-family-base:    "Inter", Arial, sans-serif;
+$input-border-radius: 0.5rem;
+
+// --- Свои переменные ---
+
+// Светлая тема (Task 1)
+$light-card-bg: #ffffff;
+$light-text:    #1a1a2e;
+$light-muted:   #6c757d;
+
+// Тёмная тема (Task 2)
+$dark-bg:       #121212;
+$dark-card-bg:  #1e1e1e;
+$dark-input-bg: #2a2a2a;
+$dark-text:     #ffffff;
+$dark-muted:    #888888;
+$dark-border:   #333333;
+
+// Навбар (Task 3)
+$navbar-bg:         #1a1a2e;
+$navbar-brand-size: 1.5rem;
+
+// Профиль (Task 4)
+$online-color: #4caf50;
+
+$shadow-light:       rgba(0, 0, 0, 0.08);
+$shadow-dark:        rgba(0, 0, 0, 0.4);
+$badge-radius:       50px;

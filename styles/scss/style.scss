@@ -1,0 +1,22 @@
+// ============================================
+// style.scss — главный файл
+// Порядок важен:
+// 1. Свои переменные
+// 2. Bootstrap с нашими переменными
+// 3. Свои кастомные стили
+// ============================================
+
+// 1. Свои переменные
+@use "variables" as *;
+
+// 2. Bootstrap — передаём переменные через with
+@use "../../node_modules/bootstrap/scss/bootstrap.scss" as * with (
+  $primary:             $primary,
+  $secondary:           $secondary,
+  $border-radius:       $border-radius,
+  $font-family-base:    $font-family-base,
+  $input-border-radius: $input-border-radius
+);
+
+// Свои стили — после Bootstrap
+@use "custom" as *;

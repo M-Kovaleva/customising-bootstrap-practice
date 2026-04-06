@@ -1,0 +1,27 @@
+{
+  "name": "customising-bootstrap-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass styles/scss:styles/css --style=compressed",
+    "watch": "sass styles/scss:styles/css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M-Kovaleva/customising-bootstrap-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M-Kovaleva/customising-bootstrap-practice/issues"
+  },
+  "homepage": "https://github.com/M-Kovaleva/customising-bootstrap-practice#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}

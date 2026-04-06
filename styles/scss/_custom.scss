@@ -1,0 +1,195 @@
+// ============================================
+// _custom.scss — кастомные компоненты
+// Все переменные берём из _variables.scss
+// ============================================
+@use "sass:color";
+@use "variables" as *;
+
+// ============================================
+// Общая кнопка — используется в Task 1 и Task 2
+// ============================================
+.btn-custom {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 0.85rem;
+  background: $primary;
+  border-color: $primary;
+}
+
+// ============================================
+// Task 1: Forgot Password Form
+// ============================================
+.forgot-form {
+  background: $light-card-bg;
+  border-radius: $border-radius;
+  padding: 2.5rem;
+  box-shadow: 0 2px 16px $shadow-light;
+  max-width: 480px;
+  margin: 0 auto;
+
+  h1 {
+    color: $light-text;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: $light-muted;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-label {
+    color: $light-text;
+    font-weight: 500;
+  }
+
+  .btn-primary {
+    @extend .btn-custom;
+    color: $light-text;
+
+    &:hover {
+      background: color.adjust($primary, $lightness: -8%);
+      border-color: color.adjust($primary, $lightness: -8%);
+      color: $light-text;
+    }
+  }
+}
+
+// ============================================
+// Task 2: Dark Contact Form
+// ============================================
+.dark-form-wrapper {
+  background: $dark-bg;
+  border-radius: $border-radius;
+  padding: 0.75rem;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.dark-form {
+  background: $dark-card-bg;
+  border-radius: $border-radius;
+  padding: 2.5rem;
+
+  h2 {
+    color: $dark-text;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-label {
+    color: $dark-text;
+    font-weight: 500;
+  }
+
+  .form-control {
+    background: $dark-input-bg;
+    border: 1px solid $dark-border;
+    color: $dark-text;
+    border-radius: $input-border-radius;
+
+    &::placeholder { color: $dark-muted; }
+
+    &:focus {
+      background: $dark-input-bg;
+      border-color: $primary;
+      color: $dark-text;
+      box-shadow: 0 0 0 0.2rem rgba($primary, 0.2);
+    }
+  }
+
+  .btn-primary {
+    @extend .btn-custom;
+    color: $dark-bg;
+
+    &:hover {
+      background: color.adjust($primary, $lightness: -8%);
+      border-color: color.adjust($primary, $lightness: -8%);
+    }
+  }
+}
+
+// ============================================
+// Task 3: Custom Navbar
+// ============================================
+.custom-navbar {
+  background: $navbar-bg !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: $border-radius;
+
+  .navbar-brand {
+    color: $dark-text !important;
+    font-size: $navbar-brand-size;
+    font-weight: 800;
+  }
+
+  .nav-link {
+    color: $secondary !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: $border-radius;
+
+    &.active {
+      background: color.adjust($primary, $lightness: 25%) !important;
+      color: $navbar-bg !important;
+    }
+
+    &:hover {
+      color: $dark-text !important;
+    }
+  }
+}
+
+// ============================================
+// Task 4: Profile Badge
+// ============================================
+.profile-badge {
+  background: $dark-card-bg;
+  padding: 0.75rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 16px $shadow-dark;
+  border-radius: $badge-radius;
+
+  &-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid $primary;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-name {
+    color: $dark-text;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  &-status {
+    color: $dark-muted;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $online-color;
+    }
+  }
+}
